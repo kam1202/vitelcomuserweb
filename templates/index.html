@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="login-section">
+        <h2>Login</h2>
+        <input type="text" id="login-phone" placeholder="Phone">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-btn">Log In</button>
+    </div>
+
+    <div id="signup-section" style="display:none;">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-phone" placeholder="Phone">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button id="signup-btn">Sign Up</button>
+    </div>
+
+    <div id="subject-selection" style="display:none;">
+        <h2>Select Subject</h2>
+        <select id="subject-dropdown"></select>
+        <button id="select-subject-btn">Go</button>
+    </div>
+
+    <div id="category-selection" style="display:none;">
+        <h2>Select Category</h2>
+        <select id="category-dropdown"></select>
+        <button id="select-category-btn">Go</button>
+    </div>
+
+    <div id="question-section" style="display:none;">
+        <h2>Question</h2>
+        <div id="question-container"></div>
+        <input type="text" id="answer-input" placeholder="Your Answer">
+        <button id="submit-answer-btn">Submit</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
